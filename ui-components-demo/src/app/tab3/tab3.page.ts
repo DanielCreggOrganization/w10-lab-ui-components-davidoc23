@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { IonicModule, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
   standalone: true,
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
+  imports: [IonicModule],
 })
 export class Tab3Page {
-  constructor() {}
+  constructor(private modalController: ModalController) {}
+
+// Close the modal
+closeModal() {
+  this.modalController.dismiss();
+}
 }
