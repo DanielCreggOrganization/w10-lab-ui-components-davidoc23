@@ -1,0 +1,38 @@
+/* Modal enter and exit animations */
+@keyframes modal-enter {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes modal-exit {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+  .modal-enter-animation {
+    animation: modal-enter 0.3s ease-out;
+  }
+  
+  .modal-leave-animation {
+    animation: modal-exit 0.3s ease-in;
+  }
+  
+  /* Styling for half-sheet modal */
+  ion-modal {
+    --min-height: 30%;
+    --height: 50%;
+    --border-radius: 16px 16px 0 0;
+    --max-width: 100%;
+    --margin-bottom: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  
